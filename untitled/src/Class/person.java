@@ -14,10 +14,14 @@ public class person {
 
         Home home1;// cara membuat object
         home1 = new Home();
+        home1.names = "Umi Maysaroh";
 
         // cara mengakses object
         System.out.println(Home.names);
         System.out.println(rumah);
         System.out.println(home1.country);
+
+        // cara mengakses metod dalam java
+        home1.SayHallo("Lia");
     }
 }
