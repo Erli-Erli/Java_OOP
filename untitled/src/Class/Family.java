@@ -6,20 +6,20 @@ public class Family {
     int Familymembers;
 
     // cara membuat Construktor
-
-    Family(String nama, String tinggal, int JumlahKeluarga){
-        names = nama;
-        Stay = tinggal;
-        Familymembers = JumlahKeluarga;
+    // kata kunci this digunakan untuk mengakses object saat ini
+    Family(String names, String Stay, int Familymembers){
+        this.names = names;
+        this.Stay = Stay;
+        this.Familymembers = Familymembers;
     }
     // digunkan this untuk mengakses data setalahnya (Overloading)
-    Family(String nama){
-        this(nama,null,0);
+    Family(String names){
+        this(names,null,0);
     }
     Family(){
         this(null,null,0);
     }
-    void value(String neme){
-        System.out.println("Halo name saya : " + neme + " nama anda : " + names);
+    void value(String names){
+        System.out.println("Halo name saya : " + names + " nama anda : " + this.names);
     }
 }
