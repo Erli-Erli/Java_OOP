@@ -17,12 +17,24 @@ public class AppEmployee {
         System.out.println(employee.Sum);
         System.out.println(employee.addess);
 
-        result(new VicePresident("",0,"Bandung"));
-        result(new Employee("",0,"Bandung"));
-        result(new Manager("",0,"Bandung"));
+        result(new VicePresident("A",0,"Bandung"));
+        result(new Employee("B",0,"Bandung"));
+        result(new Manager("C",0,"Bandung"));
     }
 
+    // untuk menggecek dan mengconversi object
     static void result( Employee employee) {
-        System.out.println("Alamat rumah kamu ada di : " + employee.addess);
+        // untuk menggecek object
+       if (employee instanceof VicePresident) {
+           // untuk mengconversi object
+           VicePresident vicePresident = (VicePresident) employee;
+           System.out.println("Hallo VP : " + vicePresident.names);
+       } else if (employee instanceof Manager) {
+           Manager manager = (Manager) employee;
+           System.out.println("Hallo manager : " + manager.names);
+       } else {
+           System.out.println("Hallow Emplyee : " + employee.names);
+       }
+
     }
 }
